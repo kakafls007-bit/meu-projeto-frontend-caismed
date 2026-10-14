@@ -1,6 +1,6 @@
 // Service worker do CaisMed: deixa o app instalável e abrindo mesmo sem internet.
 // Troque o número da versão sempre que publicar mudanças, para o navegador baixar os arquivos novos.
-const VERSAO = "caismed-v3";
+const VERSAO = "caismed-v4";
 const ARQUIVOS = [
   "./", "./index.html", "./offline.html", "./style.css", "./manifest.webmanifest",
   "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png",

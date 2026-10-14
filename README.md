@@ -4,9 +4,17 @@ Sistema de agendamento de consultas em clínicas. Aplicação de página única 
 
 ## Como rodar
 
-O app usa módulos ES, então precisa de um servidor (não abre por `file://`). Use a extensão **Live Server** do VS Code (porta 5502, já em `settings.json`) ou `python3 -m http.server`. Abra `index.html`.
+O app usa módulos ES, então precisa de um servidor (não abre por `file://`). Use a extensão **Live Server** do VS Code (clique direito em `index.html` → *Open with Live Server*; porta 5502 em `.vscode/settings.json`) ou `python3 -m http.server`. Abra `index.html`.
 
 Para publicar (Netlify, Vercel, GitHub Pages), basta enviar a pasta inteira. Sempre que publicar mudanças, aumente o número de `VERSAO` em `sw.js`.
+
+## Publicar (GitHub + Vercel)
+
+1. Suba esta pasta para o GitHub (os arquivos devem ficar na raiz do repositório: `index.html` na raiz).
+2. No Vercel: **Add New Project** → escolha o repositório → Framework Preset **Other** → deixe Build Command e Output Directory vazios → **Deploy**.
+3. A cada novo deploy com mudanças, aumente `VERSAO` em `sw.js`.
+
+> Persistência: com `API_BASE_URL = ""` os dados ficam no `localStorage` do navegador (API simulada, para demonstração). Para gravar em banco de dados de verdade, publique o back-end que siga o contrato abaixo e coloque a URL em `js/config.js`.
 
 ## Ligando ao back-end
 

@@ -80,6 +80,14 @@ window.addEventListener("hashchange", render);
 window.addEventListener("sessao-expirada", () => ir("#/login"));
 render();
 
+// PWA: o service worker só roda no site publicado (Vercel etc.). Em localhost (Live Server) ele é removido,
+// para você sempre ver as alterações de código na hora, sem cache antigo.
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  const local = ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname);
+  window.addEventListener("load", async () => {
+    try {
+      if (local) { (await navigator.serviceWorker.getRegistrations()).forEach((r) => r.unregister()); (await caches.keys()).forEach((k) => caches.delete(k)); }
+      else await navigator.serviceWorker.register("sw.js");
+    } catch {}
+  });
 }
