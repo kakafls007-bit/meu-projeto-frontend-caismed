@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>CaisMed</title>
+  <meta name="description" content="CaisMed: agendamento de consultas em clínicas, com profissionais, especialidades e horários em um só lugar." />
+  <meta name="theme-color" content="#132C77" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#view" onclick="document.getElementById('view').focus();return false">Ir para o conteúdo</a>
+  <div class="app" id="app"></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <noscript><p style="padding:24px">O CaisMed precisa do JavaScript ativado para funcionar.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
