@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas consultas</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header header-compact">
+      <a href="home.html" class="back-btn" data-fallback="home.html"></a>
+      <div class="logo logo-inline">
+        <span class="logo-icon"></span>
+        <span>CaisMed</span>
+      </div>
+    </header>
+
+    <main class="app-body">
+      <p class="intro-text left">Minhas consultas</p>
+
+      <div class="tabs" id="consultas-tabs">
+        <button type="button" class="tab-btn active" data-tab="lista-proximas">Próximas</button>
+        <button type="button" class="tab-btn" data-tab="lista-historico">Histórico</button>
+      </div>
+
+      <div class="tab-panel active" id="lista-proximas"></div>
+      <div class="tab-panel" id="lista-historico"></div>
+
+      <div class="bottom-area">
+        <a href="agendamento.html" class="btn">Marcar Nova Consulta</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

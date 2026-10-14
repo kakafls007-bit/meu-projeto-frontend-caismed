@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CaisMed | Triagem</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app app-chat">
+    <header class="app-header header-compact">
+      <a href="home.html" class="back-btn" data-fallback="home.html"></a>
+      <div class="logo logo-inline">
+        <span class="logo-icon"></span>
+        <span>CaisMed</span>
+      </div>
+    </header>
+
+    <main class="app-body chat-body">
+      <p class="intro-text left">Triagem</p>
+
+      <div class="chat-messages" id="chat-messages"></div>
+      <div class="chat-input-area" id="chat-input-area"></div>
+      <p class="aviso">A triagem não substitui uma consulta médica.</p>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

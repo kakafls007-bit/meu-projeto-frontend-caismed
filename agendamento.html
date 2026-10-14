@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header header-compact">
+      <a href="home.html" class="back-btn" data-fallback="home.html"></a>
+      <div class="logo logo-inline">
+        <span class="logo-icon"></span>
+        <span>CaisMed</span>
+      </div>
+    </header>
+
+    <main class="app-body">
+      <p class="intro-text left">Marque Sua Consulta</p>
+
+      <form id="agendamento-form">
+        <div class="field">
+          <label for="especialidade">Especialidade</label>
+          <select id="especialidade" name="especialidade" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="clinico_geral">Clínico geral</option>
+            <option value="pediatria">Pediatria</option>
+            <option value="cardiologia">Cardiologia</option>
+            <option value="dermatologia">Dermatologia</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="data">Data</label>
+          <input type="date" id="data" name="data" required />
+        </div>
+
+        <div class="field">
+          <label>Horário</label>
+          <div class="slots" id="slots">
+            <button type="button" class="slot-btn">08:00</button>
+            <button type="button" class="slot-btn">09:00</button>
+            <button type="button" class="slot-btn">10:00</button>
+            <button type="button" class="slot-btn">13:00</button>
+            <button type="button" class="slot-btn">14:00</button>
+            <button type="button" class="slot-btn">15:00</button>
+          </div>
+          <input type="hidden" id="horario" name="horario" required />
+        </div>
+
+        <div class="bottom-area">
+          <button type="submit" class="btn">Confirmar Agendamento</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

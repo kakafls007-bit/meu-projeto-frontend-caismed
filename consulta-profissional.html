@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhe da consulta</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header header-compact">
+      <a href="painel-profissional.html" class="back-btn" data-fallback="painel-profissional.html"></a>
+      <div class="logo logo-inline">
+        <span class="logo-icon"></span>
+        <span>CaisMed</span>
+      </div>
+    </header>
+
+    <main class="app-body" id="consulta-detalhe">
+      <p class="intro-text left">Detalhe da consulta</p>
+      <p class="empty-state" id="consulta-nao-encontrada" style="display:none;">
+        Consulta não encontrada.
+      </p>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

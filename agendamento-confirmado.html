@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento confirmado</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header center-header">
+      <a href="home.html" class="back-btn" data-fallback="home.html"></a>
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span>CaisMed</span>
+      </div>
+    </header>
+
+    <main class="app-body center">
+      <p class="message-text">Sua consulta foi agendada com sucesso.</p>
+
+      <div class="summary-box" id="resumo-agendamento">
+        <div class="summary-row"><span class="label">Especialidade</span><span class="value" id="resumo-especialidade">—</span></div>
+        <div class="summary-row"><span class="label">Data</span><span class="value" id="resumo-data">—</span></div>
+        <div class="summary-row"><span class="label">Horário</span><span class="value" id="resumo-horario">—</span></div>
+      </div>
+
+      <div class="bottom-area">
+        <a href="home.html" class="btn">Voltar para o início</a>
+        <a href="consultas.html" class="secondary-link">ver minhas consultas</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

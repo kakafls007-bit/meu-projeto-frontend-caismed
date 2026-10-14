@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CaisMed | Painel Profissional</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header header-compact">
+      <div class="logo logo-inline">
+        <span class="logo-icon"></span>
+        <span>CaisMed</span>
+      </div>
+    </header>
+
+    <main class="app-body">
+      <p class="intro-text left">Painel Profissional</p>
+
+      <div class="stats" id="resumo-painel"></div>
+
+      <div class="tabs" id="painel-tabs">
+        <button type="button" class="tab-btn active" data-tab="lista-aguardando">Aguardando</button>
+        <button type="button" class="tab-btn" data-tab="lista-concluidas">Concluídas</button>
+        <button type="button" class="tab-btn" data-tab="lista-clientes">Clientes</button>
+      </div>
+
+      <div class="tab-panel active" id="lista-aguardando"></div>
+      <div class="tab-panel" id="lista-concluidas"></div>
+      <div class="tab-panel" id="lista-clientes"></div>
+
+      <a class="logout-link" href="login-profissional.html">Sair</a>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

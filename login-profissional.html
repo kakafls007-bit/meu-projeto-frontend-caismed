@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Profissional</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header center-header">
+      <a href="index.html" class="back-btn" data-fallback="index.html"></a>
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span>CaisMed</span>
+      </div>
+    </header>
+
+    <main class="app-body center">
+      <p class="intro-text">Área do Profissional</p>
+
+      <form id="login-profissional-form">
+        <div class="field">
+          <label for="registro">Matrícula Profissional</label>
+          <input type="text" id="registro" name="registro" required />
+        </div>
+
+        <div class="field">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" required />
+        </div>
+
+        <p class="aviso">Acesso de demonstração: 1001 / caismed123</p>
+        <div class="spacer"></div>
+
+        <div class="bottom-area">
+          <button type="submit" class="btn">Entrar</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

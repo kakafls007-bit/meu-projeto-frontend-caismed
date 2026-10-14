@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CaisMed | Pagamentos</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header header-compact">
+      <a href="home.html" class="back-btn" data-fallback="home.html"></a>
+      <div class="logo logo-inline"><span class="logo-icon"></span><span>CaisMed</span></div>
+    </header>
+    <main class="app-body">
+      <p class="intro-text left">Pagamentos</p>
+      <div class="summary-box" id="fatura"></div>
+      <div class="field" style="margin-top:16px"><label for="metodo">Forma de Pagamento</label>
+        <select id="metodo"><option>Pix</option><option>Cartão de Crédito</option><option>Boleto</option></select></div>
+      <div class="pix-box" id="pix-box"></div>
+      <button type="button" class="btn" id="btn-pagar">Pagar Fatura</button>
+      <p class="intro-text left" style="margin-top:24px;font-size:18px">Histórico de Pagamentos</p>
+      <div class="tab-panel active" id="historico-pag"></div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

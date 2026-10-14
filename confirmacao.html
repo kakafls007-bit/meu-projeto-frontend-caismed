@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-mail enviado</title>
+  <script>document.documentElement.setAttribute("data-tema",localStorage.getItem("tema")==="escuro"||localStorage.getItem("tema")==="preto"?"escuro":"claro")</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header center-header">
+      <a href="index.html" class="back-btn" data-fallback="index.html"></a>
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span>CaisMed</span>
+      </div>
+    </header>
+
+    <main class="app-body center">
+      <p class="message-text">
+        Um e-mail de redefinição de senha foi enviado. Por favor, confira sua caixa de entrada.
+      </p>
+
+      <div class="bottom-area">
+        <a href="index.html" class="btn">Voltar</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
